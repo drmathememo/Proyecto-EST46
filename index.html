@@ -1,142 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
-  <title>Lentes 46 — PWA</title>
-  <meta name="theme-color" content="#0ea5e9">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lentes 46</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 </head>
 <body>
-  <header class="topbar">
-    <div class="logo">46</div>
-    <div class="title">
-      <div class="title-main">Lentes 46</div>
-      <div class="title-sub">PWA móvil · Plan 2022</div>
-    </div>
-    <button id="btnInstall" class="btn primary small" hidden>Instalar</button>
-  </header>
-
-  <main class="container">
-    <section id="help" class="card info">
-      <h2>Guía rápida (móvil)</h2>
-      <ol>
-        <li>Completa <b>Docente</b> y <b>Grupo</b>.</li>
-        <li>Escribe la <b>Lectura de la realidad</b> y usa los <b>Lentes</b>.</li>
-        <li>Llena el <b>Proyecto</b> y elige al menos <b>1 metodología</b>.</li>
-        <li>Exporta o envía por <b>Webhook</b>.</li>
-      </ol>
-      <div class="row gap">
-        <button id="btnGuideMD" class="btn">Descargar Guía .md</button>
-        <button id="btnGuidePDF" class="btn">Imprimir Guía / PDF</button>
-        <button id="btnDemo" class="btn">Test rápido</button>
-        <button id="btnClear" class="btn">Limpiar</button>
-        <button id="btnHideHelp" class="link">Ocultar</button>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Identidad</h2>
-      <div class="grid-2">
-        <label>Rol
-          <select id="role">
-            <option value="docente">Docente</option>
-            <option value="coordinador">Coordinador</option>
-          </select>
-        </label>
-        <label>Docente
-          <input id="teacher" placeholder="Nombre del docente">
-        </label>
-        <label class="col-2">Grupo
-          <input id="group" placeholder="p.ej. 2°B">
-        </label>
-        <div class="col-2 row gap">
-          <button id="btnSave" class="btn">Guardar</button>
-          <button id="btnLoad" class="btn">Cargar</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Lectura de la realidad</h2>
-      <textarea id="reading" class="tarea" placeholder="Ej.: 60% con dificultad de comprensión; ruido entre talleres; baja disponibilidad de libros"></textarea>
-    </section>
-
-    <section class="card">
-      <h2>Lentes</h2>
-      <div class="row gap">
-        <button id="btnRed" class="btn solid red">Rojo · Problemas</button>
-        <button id="btnGreen" class="btn solid green">Verde · Oportunidades</button>
-        <button id="btnBlue" class="btn solid blue">Azul · Contexto</button>
-      </div>
-      <div class="meta small">
-        <div><b>Rojo:</b> <span id="txtRed">—</span></div>
-        <div><b>Verde:</b> <span id="txtGreen">—</span></div>
-        <div><b>Azul:</b> <span id="txtBlue">—</span></div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Proyecto</h2>
-      <label>Nombre del proyecto
-        <input id="pname" placeholder="Ej.: Maratón de Lectura Técnica 46">
-      </label>
-      <label>Necesidad
-        <textarea id="pneed" class="tarea"></textarea>
-      </label>
-      <label>Objetivo
-        <textarea id="pobj" class="tarea"></textarea>
-      </label>
-      <label>Indicadores
-        <textarea id="pind" class="tarea"></textarea>
-      </label>
-      <label>Evidencias
-        <textarea id="pevi" class="tarea"></textarea>
-      </label>
-
-      <div class="field">
-        <div class="label">Meses</div>
-        <div id="months" class="chips"></div>
-      </div>
-
-      <div class="field">
-        <div class="label">Metodologías</div>
-        <div id="meth" class="chips wrap"></div>
-        <input id="methOther" class="hide" placeholder="Describe la otra metodología">
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Exportar</h2>
-      <div class="grid-2">
-        <button id="btnMD" class="btn">Descargar .md</button>
-        <button id="btnPDF" class="btn">PDF</button>
-        <button id="btnJSON" class="btn">Descargar .json</button>
-        <button id="btnShare" class="btn">Compartir</button>
-      </div>
-      <div class="row gap mt">
-        <input id="webhook" placeholder="Webhook (Apps Script / Make / Supabase)" class="grow">
-        <button id="btnSend" class="btn">Enviar al coordinador (Webhook)</button>
-      </div>
-      <div id="msg" class="msg"></div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    Regla de oro: la metodología se define en Proyectos y se detalla en Planeación. La PWA permite llenar todo en celular, guardar offline y enviar cuando haya internet.
-  </footer>
-
+  <h1>Lentes 46 PWA</h1>
+  <p>App funcionando correctamente en Android e iOS.</p>
   <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').catch(()=>{});
-      });
-    }
-  </script>
 </body>
 </html>

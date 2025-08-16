@@ -1,12 +1,10 @@
 {
   "name": "Lentes 46",
   "short_name": "Lentes46",
-  "description": "Lectura de la realidad → Lentes → Proyecto → Exportar. Plan de estudios 2022.",
   "start_url": ".",
   "display": "standalone",
-  "scope": ".",
-  "background_color": "#0ea5e9",
-  "theme_color": "#0ea5e9",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "icons": [
     {
       "src": "icons/icon-192.png",
@@ -17,12 +15,6 @@
       "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-      "src": "icons/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "any"
     }
   ]
 }

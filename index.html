@@ -3,54 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto Escolar - EST46</title>
+  <title>Proyecto EST46 - Lectura de la Realidad</title>
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <header>
-    <h1>Proyecto Escolar EST46</h1>
-    <p>Selecciona un color de lentes para proponer ideas</p>
-  </header>
-
-  <main>
-    <div class="lentes-container">
-      <button class="lente rojo" onclick="abrirSeccion('rojo')">🔴 Rojo</button>
-      <button class="lente verde" onclick="abrirSeccion('verde')">🟢 Verde</button>
-      <button class="lente azul" onclick="abrirSeccion('azul')">🔵 Azul</button>
-      <button class="lente amarillo" onclick="abrirSeccion('amarillo')">🟡 Amarillo</button>
-    </div>
-
-    <section id="seccion-rojo" class="seccion oculto">
-      <h2>Lentes Rojos (Crítica constructiva)</h2>
-      <textarea id="input-rojo" placeholder="Escribe aquí tus observaciones..."></textarea>
-      <button onclick="guardarPropuesta('rojo')">Guardar</button>
+  <header><h1>Lectura de la Realidad</h1></header>
+  <main id="content">
+    <section id="intro">
+      <h2>¿Qué es la lectura de la realidad?</h2>
+      <p>Es el análisis de todos los elementos que afectan el aprendizaje: salud, entorno, cultura y emociones.</p>
+      <div class="examples">
+        <div class="card"><h3>Ejemplo Salud</h3><p>Alumnos sedentarios muestran cansancio y baja energía en clase.</p></div>
+        <div class="card"><h3>Ejemplo Entorno</h3><p>Problemas viales generan estrés y llegadas tarde.</p></div>
+        <div class="card"><h3>Ejemplo Cultura</h3><p>Lengua materna distinta al español puede dificultar la comprensión.</p></div>
+      </div>
+      <button onclick="startApp()">Comenzar</button>
     </section>
-
-    <section id="seccion-verde" class="seccion oculto">
-      <h2>Lentes Verdes (Ideas creativas)</h2>
-      <textarea id="input-verde" placeholder="Escribe aquí tus ideas..."></textarea>
-      <button onclick="guardarPropuesta('verde')">Guardar</button>
-    </section>
-
-    <section id="seccion-azul" class="seccion oculto">
-      <h2>Lentes Azules (Organización y control)</h2>
-      <textarea id="input-azul" placeholder="Escribe cómo organizar el proyecto..."></textarea>
-      <button onclick="guardarPropuesta('azul')">Guardar</button>
-    </section>
-
-    <section id="seccion-amarillo" class="seccion oculto">
-      <h2>Lentes Amarillos (Aspectos positivos)</h2>
-      <textarea id="input-amarillo" placeholder="Escribe lo positivo que ves..."></textarea>
-      <button onclick="guardarPropuesta('amarillo')">Guardar</button>
+    <section id="app" style="display:none;">
+      <p>Aquí vendrán los lentes de colores y las demás funciones del proyecto.</p>
     </section>
   </main>
-
-  <footer>
-    <button onclick="exportarMarkdown()">📥 Exportar en .MD</button>
-    <button onclick="exportarTXT()">📥 Exportar en TXT</button>
-  </footer>
-
   <script src="app.js"></script>
 </body>
 </html>

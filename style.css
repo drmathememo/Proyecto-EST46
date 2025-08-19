@@ -1,49 +1,5 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f9;
-  text-align: center;
-}
-header {
-  background: #4CAF50;
-  color: white;
-  padding: 1rem;
-}
-.lentes-container {
-  margin: 20px;
-}
-.lente {
-  margin: 10px;
-  padding: 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.rojo { background: #ff4d4d; color: white; }
-.verde { background: #4CAF50; color: white; }
-.azul { background: #3399ff; color: white; }
-.amarillo { background: #ffcc00; color: black; }
-.seccion {
-  margin: 20px;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-.oculto { display: none; }
-textarea {
-  width: 90%;
-  height: 100px;
-  margin: 10px 0;
-}
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-footer {
-  margin: 20px;
-}
+body { font-family: sans-serif; margin:0; padding:0; background:#f5f5f5; }
+header { background:#0066cc; color:white; padding:1rem; text-align:center; }
+main { padding:1rem; }
+.card { background:white; padding:1rem; margin:1rem 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+button { background:#0066cc; color:white; border:none; padding:0.5rem 1rem; border-radius:5px; cursor:pointer; }
